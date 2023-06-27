@@ -1,0 +1,26 @@
+{
+  "name": "labecommerce-backend",
+  "version": "1.0.0",
+  "description": "Primeiro projeto de Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "url": "git+https://github.com/urianlinck/labecommerce-backend.git"
+  },
+  "keywords": [
+    "labecommerce"
+  ],
+  "author": "Urian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urianlinck/labecommerce-backend/issues"
+  },
+  "homepage": "https://github.com/urianlinck/labecommerce-backend#readme",
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "typescript": "^5.1.3"
+  }
+}
