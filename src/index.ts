@@ -67,5 +67,6 @@ app.post("/products", (req: Request, res: Response) => {
 
     res.status(201).send("Produto cadastrado com sucesso!")
 })
+
 // console.log(user);
 // console.log(products)
