@@ -45,12 +45,12 @@ export const products: TProducts[] = [
 
 export function createUser(id: string, name: string, email: string, password: string): void{
     const newUser: TUsers = { id, name, email, password, createdAt: data2.toISOString() };
-    user.push(newUser);
+    users.push(newUser);
     console.log('Cadastrado realizado com sucesso:', newUser);
 }
 
 export function getAllUsers() : TUsers[] {
-    return user;
+    return users;
 }
 
 export function createProduct(id: string, name: string, price: number, description: string, imageUrl: string): void{
