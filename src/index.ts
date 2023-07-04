@@ -68,5 +68,52 @@ app.post("/products", (req: Request, res: Response) => {
     res.status(201).send("Produto cadastrado com sucesso!")
 })
 
-// console.log(user);
-// console.log(products)
+app.put("/products/:id", (req: Request, res: Response) => {
+    const id = req.params.id
+
+    const newId = req.body.id as string | undefined
+    const newName = req.body.name as string | undefined
+    const newPrice = req.body.price as number | undefined
+    const newDescription = req.body.description as string | undefined
+    const newImageUrl = req.body.imageUrl as string | undefined
+
+    const product = products.find((product) => product.id === id)
+
+    if(product){
+        product.id = newId || product.id
+        product.name = newName || product.name
+        product.description = newDescription || product.description
+        product.imageUrl = newImageUrl || product.imageUrl
+        
+
+        if(newPrice !== undefined){
+            product.price = newPrice
+        }
+    }
+
+    res.status(200).send("Produto atualizado com sucesso!")
+})
+
+app.delete("/users/:id", (req: Request, res: Response) => {
+    const id = req.params.id
+
+    const userIndex = users.findIndex((user)=> user.id === id)
+
+    if(userIndex >=0){
+        users.slice(userIndex, 1)
+    }
+
+    res.status(200).send("User apagado com sucesso!")
+})
+
+app.delete("/products/:id", (req: Request, res: Response) => {
+    const id = req.params.id
+
+    const productsIndex = products.findIndex((product)=> product.id === id)
+
+    if(productsIndex >=0){
+        products.slice(productsIndex, 1)
+    }
+
+    res.status(200).send("Produto apagado com sucesso!")
+})
