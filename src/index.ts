@@ -1,14 +1,73 @@
-import { user, products, createUser, getAllUsers, createProduct, getAllProducts, searchProductsByName } from "./database";
 
-console.log(user);
-console.log(products)
+import {products, users, data2 } from "./database";
+import  express, { Request, Response} from "express";
+import cors from 'cors';
+import { TProducts, TUsers } from "./types";
 
-createUser("user03", "Tarja Turunen", "naig-tuixi@hotmail.com", "NeMoXD")
+const app = express();
 
-console.table(getAllUsers())
+app.use(express.json());
+app.use(cors());
 
-createProduct("product03", "presilha", 10, "par de presilha de metal preta com asas de morcego em feltro", "https://http2.mlstatic.com/D_NQ_NP_769732-MLB49303768406_032022-O.webp")
+app.listen(3003, () => {
+    console.log("Servidor rodando na porta 3003");
+});
 
-console.table(getAllProducts())
+app.get('/ping', (req: Request, res: Response) => {
+    res.send('Pong!')
+  });
 
-console.table(searchProductsByName("pulseira de spike"))
+app.get("/users", (req: Request, res: Response) => {
+    res.status(200).send(users)
+})
+
+app.get("/products", (req: Request, res: Response) => {
+    const name = req.query.name as string
+
+    const result= products.filter(
+        (product)=> product.name.toLowerCase().includes(name.toLowerCase())
+    )
+    res.status(200).send(result)
+})
+
+app.post("/users", (req: Request, res: Response) => {
+    const id = req.body.id as string
+    const name = req.body.name as string
+    const email = req.body.email as string
+    const password = req.body.password as string
+
+    const newUser: TUsers = {
+        id,
+        name,
+        email,
+        password,
+        createdAt: data2.toISOString()
+    }
+
+    users.push(newUser)
+
+    res.status(201).send("Cadastrado realizado com sucesso!")
+})
+
+app.post("/products", (req: Request, res: Response) => {
+    const id = req.body.id as string
+    const name = req.body.name as string
+    const price = req.body.price as number
+    const description = req.body.description as string
+    const imageUrl = req.body.imageUrl as string
+
+    const newProduct: TProducts = {
+        id,
+        name,
+        price,
+        description,
+        imageUrl
+    }
+
+    products.push(newProduct)
+
+    res.status(201).send("Produto cadastrado com sucesso!")
+})
+
+// console.log(user);
+// console.log(products)

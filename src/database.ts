@@ -4,10 +4,10 @@ import { TProducts, TUsers } from "./types";
 let data = new Date();
 
 // O data.valueOf() irá retornar a data em ms (milissegundos). Então é preciso converter o GMT também em milissegundos: data.getTimezoneOffset() * 60000.
-let data2 = new Date(data.valueOf() - data.getTimezoneOffset() * 60000);
+export let data2 = new Date(data.valueOf() - data.getTimezoneOffset() * 60000);
 
 
-export const user: TUsers[] = [
+export const users: TUsers[] = [
     {
         id: "user01",
         name: "Amy Lee",
