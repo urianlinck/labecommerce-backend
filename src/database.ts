@@ -42,3 +42,30 @@ export const products: TProducts[] = [
         imageUrl: "https://http2.mlstatic.com/D_NQ_NP_832544-MLB53605632308_022023-O.webp"
     }  
 ]
+
+export function createUser(id: string, name: string, email: string, password: string): void{
+    const newUser: TUsers = { id, name, email, password, createdAt: data2.toISOString() };
+    user.push(newUser);
+    console.log('Cadastrado realizado com sucesso:', newUser);
+}
+
+export function getAllUsers() : TUsers[] {
+    return user;
+}
+
+export function createProduct(id: string, name: string, price: number, description: string, imageUrl: string): void{
+    const newProduct: TProducts = {id, name, price, description, imageUrl};
+    products.push(newProduct);
+    console.log("Produto criado com sucesso")
+}
+
+export function getAllProducts() : TProducts[] {
+    return products;
+}
+
+export function searchProductsByName(name: string){
+    const productSearch = products.filter((product)=>{
+        return product.name.toLowerCase() === name.toLowerCase();
+    })
+    return productSearch
+}
