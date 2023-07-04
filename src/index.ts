@@ -1,3 +1,4 @@
+
 import {products, users, data2 } from "./database";
 import  express, { Request, Response} from "express";
 import cors from 'cors';
@@ -116,3 +117,7 @@ app.delete("/products/:id", (req: Request, res: Response) => {
 
     res.status(200).send("Produto apagado com sucesso!")
 })
+
+// console.log(user);
+// console.log(products)
+
