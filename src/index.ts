@@ -85,7 +85,6 @@ app.put("/products/:id", (req: Request, res: Response) => {
         product.description = newDescription || product.description
         product.imageUrl = newImageUrl || product.imageUrl
         
-
         if(newPrice !== undefined){
             product.price = newPrice
         }
