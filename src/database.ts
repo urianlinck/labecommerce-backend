@@ -27,7 +27,7 @@ export const users: TUsers[] = [
 
 export const products: TProducts[] = [
     {
-        id: "product01",
+        id: "p01",
         name: "cinto de tachinhas",
         price: 30.00,
         description: "cinto de couro, coberto com tachinhas quadradas metalicas e fechamento com fivela",
@@ -35,7 +35,7 @@ export const products: TProducts[] = [
     },
 
     {
-        id: "product02",
+        id: "p02",
         name: "pulseira de spike",
         price: 50.00,
         description: "pulseira de couro com spikes pontudos metálicos e fechamento com botão",
