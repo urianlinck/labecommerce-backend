@@ -101,3 +101,51 @@ VALUES (
         "mascara de couro mulher gato",
         "https://www.lojastyleme.com.br/cdn/shop/products/mascara-de-couro-mulher-gato_3_650x.jpg?v=1662041851"
     );
+
+SELECT * FROM users AS usuários;
+
+SELECT * FROM products AS produtos;
+
+SELECT * FROM products WHERE name LIKE '%couro';
+
+INSERT INTO
+    users (
+        id,
+        name,
+        email,
+        password,
+        created_at
+    )
+VALUES (
+        "user06",
+        "wanda visão",
+        "visaumamoreterno@uol.com",
+        "familiaeamor",
+        DATE('now')
+    );
+
+INSERT INTO
+    products (
+        id,
+        name,
+        price,
+        description,
+        image_url
+    )
+VALUES (
+        "p08",
+        "algemas de couro",
+        25,
+        "algemas de couro com  corrente",
+        "https://cdn.iset.io/assets/54665/produtos/65/algema_em_couro_sint_tico_preta.jpg"
+    );
+
+DELETE FROM users WHERE id = 'user06';
+
+DELETE FROM products WHERE id = 'p08';
+
+UPDATE products
+SET
+    price = 50,
+    description = 'bolsa de couro preta'
+WHERE id = 'p03';
