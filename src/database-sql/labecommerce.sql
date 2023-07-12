@@ -149,3 +149,45 @@ SET
     price = 50,
     description = 'bolsa de couro preta'
 WHERE id = 'p03';
+
+CREATE TABLE
+    purchases (
+        id TEXT PRIMARY KEY UNIQUE NOT NULL,
+        buyer TEXT NOT NULL,
+        total_price NUMBER NOT NULL,
+        created_at TEXT NOT NULL,
+        FOREIGN KEY (buyer) REFERENCES users(id)
+    );
+
+INSERT INTO
+    purchases (
+        id,
+        buyer,
+        total_price,
+        created_at
+    )
+VALUES (
+        'pur01',
+        'user03',
+        50,
+        DATE('now')
+    ), (
+        'pur02',
+        'user04',
+        75,
+        DATE('now')
+    );
+
+UPDATE purchases SET total_price = 60 WHERE id = 'pur01';
+
+SELECT * FROM purchases;
+
+SELECT
+    purchases.id,
+    users.id,
+    users.name,
+    users.email,
+    purchases.total_price,
+    DATE('now')
+FROM purchases
+    INNER JOIN users ON purchases.buyer = users.id;
