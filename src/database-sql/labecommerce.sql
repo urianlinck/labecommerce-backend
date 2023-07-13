@@ -156,8 +156,10 @@ CREATE TABLE
         buyer TEXT NOT NULL,
         total_price NUMBER NOT NULL,
         created_at TEXT NOT NULL,
-        FOREIGN KEY (buyer) REFERENCES users(id)
+        FOREIGN KEY (buyer) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
     );
+
+DROP TABLE purchases;
 
 INSERT INTO
     purchases (
@@ -191,3 +193,27 @@ SELECT
     DATE('now')
 FROM purchases
     INNER JOIN users ON purchases.buyer = users.id;
+
+CREATE TABLE
+    purchases_products (
+        purchase_id TEXT NOT NULL,
+        product_id TEXT NOT NULL,
+        quantity INTEGER NOT NULL,
+        FOREIGN KEY (purchase_id) REFERENCES purchases (id) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (product_id) REFERENCES products (id) ON UPDATE CASCADE ON DELETE CASCADE
+    );
+
+INSERT INTO
+    purchases_products (
+        purchase_id,
+        product_id,
+        quantity
+    )
+VALUES ('pur01', "p06", 3), ('pur02', "p07", 5), ('pur01', "p05", 2);
+
+SELECT *
+FROM purchases_products
+    INNER JOIN purchases ON purchases_products.purchase_id = purchase_id
+    INNER JOIN products ON products.id = purchases_products.product_id
+WHERE
+    purchases.id = purchases_products.purchase_id;
