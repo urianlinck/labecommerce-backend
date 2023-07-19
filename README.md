@@ -14,28 +14,28 @@ Cada endpoint tem uma ou mais funcionalidades que serão explicadas a seguir:
 
 Apenas um teste de funcionalidade.
 
-![Alt text](ping.png)
+![ping](https://github.com/urianlinck/labecommerce-backend/assets/125294858/116097df-6a42-41ea-93a2-f54e628ccade)
 
 ### GET AllUsers ###
 
 Utilizado para encontrar um usuário específico na API. Deve-se sempre utilizar o nome do usuário.
 
-![Alt text](allUsers1.png)
-![Alt text](allUsers2.png)
+![allUsers1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/ca8e76a0-2fd4-4545-91ff-f2231dc61686)
+![allUsers2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/290f82fa-cacb-401a-984f-36d21b67e983)
 
 ### GET AllProducts ###
 
 Utilizado para encontrar um produto específico na API. Deve-se sempre utilizar o NOME do produto.
 
-![Alt text](allProducts1.png)
-![Alt text](allProducts2.png)
+![allProducts1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/441ec571-dc2d-4c42-a493-75125b754355)
+![allProducts2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/6f676edb-16ab-4244-9871-ab65d1218e47)
 
 ### GET AllPurchases ###
 
 Utilizado para encontrar uma compra específico na API. Deve-se sempre utilizar o NOME da compra.
 
-![Alt text](allPurchases1.png)
-![Alt text](allPurchases2.png)
+![allPurchases1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/0d821f46-1801-4c6e-997d-0058573c4d98)
+![allPurchases2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/baf9d7c9-968e-4d29-a60a-b7713a622800)
 
 ### POST CreateUser ###
 
@@ -50,8 +50,8 @@ o ID não pode ser igual a um ID existente;
 o EMAIL não pode ser cadastrado mais de uma vez;
 todos os dados devem ser do tipo string.
 
-![Alt text](createUser1.png)
-![Alt text](createUser2.png)
+![createUser1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/910c1db2-c846-4610-8929-cdb75f19e272)
+![createUser2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/3402f742-1091-4065-a93c-e6f3ff328cf2)
 
 ### POST CreateProduct ###
 
@@ -68,8 +68,8 @@ PREÇO deve ser do tipo number.
 o ID não pode ser igual a um existente no sistema.
 o PREÇO não pode ser zerado.
 
-![Alt text](createProduct1.png)
-![Alt text](createProduct2.png)
+![createProduct1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/5f511414-5727-41d3-a7ca-d28e24b1f219)
+![createProduct2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/98fa4104-c5be-4e29-930e-bb1f35311acf)
 
 ### POST CreatePurchase ###
 
@@ -83,10 +83,11 @@ Observações:
 ID da compra, Buyer, e ID dos produtos devem ser Strings;
 Quantidade de produtos deve ser número.
 
-![Alt text](createPurchase1.png)
-![Alt text](createPurchase2.png)
-![Alt text](createPurchase3.png)
-![Alt text](createPurchase4.png)
+![createPurchase1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/640a38b8-2c95-4d24-a5a1-c258e7f925c1)
+![createPurchase2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/44c31d01-8921-465f-8ed6-06241219f64a)
+![createPurchase3](https://github.com/urianlinck/labecommerce-backend/assets/125294858/a2031013-6216-4975-8098-091f336dd611)
+![createPurchase4](https://github.com/urianlinck/labecommerce-backend/assets/125294858/19054e55-fd9b-4764-842d-82f7e683d31e)
+
 
 ### PUT EditProduct ###
 
@@ -98,24 +99,27 @@ PREÇO deve ser do tipo number.
 o ID não pode ser igual a um existente no sistema.
 o PREÇO não pode ser zerado.
 
-![Alt text](editProduct1.png)
-![Alt text](editProduct2.png)
+![editProduct1](https://github.com/urianlinck/labecommerce-backend/assets/125294858/429fb48a-f0da-4dac-9fc7-3a93eb022766)
+![editProduct2](https://github.com/urianlinck/labecommerce-backend/assets/125294858/a9cfc05a-73aa-4df3-a9f3-926b35e7d43c)
 
 ### DEL DeleteUser ###
 
 Utilizado para apagar um usuário específico da API. Deve-se sempre utilizar o ID do usuário.
 EndFragment
 
-![Alt text](deleteUser.png)
+![deleteUser](https://github.com/urianlinck/labecommerce-backend/assets/125294858/5b8afc8f-00ac-4cb8-a2ee-23144a841368)
+
 
 ### DEL DeleteProduct ###
 
 Utilizado para apagar um produto específico da API. Deve-se sempre utilizar o ID do produto.
 
-![Alt text](deleteProduct.png)
+![deleteProduct](https://github.com/urianlinck/labecommerce-backend/assets/125294858/4e9526e0-1bdd-47bb-940a-6ce3dbeaf9d7)
+
 
 ### DEL DeletePurchase ###
 
 Utilizado para apagar uma compra específica da API. Deve-se sempre usar o ID da compra.
 
-![Alt text](deletePurchase.png)
+![deletePurchase](https://github.com/urianlinck/labecommerce-backend/assets/125294858/32c0bfeb-1317-4c7a-b0b5-28f4ea9a86f3)
+
