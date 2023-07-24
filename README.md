@@ -88,7 +88,6 @@ Quantidade de produtos deve ser número.
 ![createPurchase3](https://github.com/urianlinck/labecommerce-backend/assets/125294858/a2031013-6216-4975-8098-091f336dd611)
 ![createPurchase4](https://github.com/urianlinck/labecommerce-backend/assets/125294858/19054e55-fd9b-4764-842d-82f7e683d31e)
 
-
 ### PUT EditProduct ###
 
 Utilizado para editar um produto específico da API. Deve-se sempre utilizar o ID do produto.
@@ -109,17 +108,14 @@ EndFragment
 
 ![deleteUser](https://github.com/urianlinck/labecommerce-backend/assets/125294858/5b8afc8f-00ac-4cb8-a2ee-23144a841368)
 
-
 ### DEL DeleteProduct ###
 
 Utilizado para apagar um produto específico da API. Deve-se sempre utilizar o ID do produto.
 
 ![deleteProduct](https://github.com/urianlinck/labecommerce-backend/assets/125294858/4e9526e0-1bdd-47bb-940a-6ce3dbeaf9d7)
 
-
 ### DEL DeletePurchase ###
 
 Utilizado para apagar uma compra específica da API. Deve-se sempre usar o ID da compra.
 
 ![deletePurchase](https://github.com/urianlinck/labecommerce-backend/assets/125294858/32c0bfeb-1317-4c7a-b0b5-28f4ea9a86f3)
-
